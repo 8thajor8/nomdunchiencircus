@@ -3,16 +3,73 @@ html {
   width: 100%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
-   background: url(header.jpg) no-repeat center center fixed; 
+  background-color: #000000;  
+}
+
+.bordes {
+    border-radius:15px;
+    /*border:1px solid #bbb;*/
+ 
+}
+/*NAV */
+.topart{
+	background-color: rgb(128, 21, 21, 0.2);
+	position: fixed;
+	top:0;
+	width: 100%
+}
+
+.main-nav{
+	display: flex;
+	list-style: none;
+	font-size: 5em
+	margin: 0px;
+}
+
+
+ul{
+	padding: 0px;
+	margin:0px;
+}
+
+li{
+	padding: 30px;
+	font-weight: bold;
+
+}
+
+.topart a{
+	color: #e2dbdb;
+	text-decoration: none;
+
+}
+
+.push{
+	margin-left: auto;
+}
+
+@media only screen and (max-width: 600px){
+	.main-nav{
+		font-size: 0.8em;
+	}
+
+	li{
+		padding: 35px 20px;
+	}
+
+}
+
+/*COVER*/
+
+.containerplus{
+	
+	height: 60vh;
+	justify-content: center;
+	 background: url(header.jpg) no-repeat bottom center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-h1{
-	font-size: 2.5rem;
-	color: 	#e2dbdb;
 }
 
 .btn-xl{
@@ -41,6 +98,66 @@ hr{
 	max-width: 200px;
 }
 
+h1{
+	font-size: 2REM;
+	color: 	#e2dbdb;
+}
+
 .buffer{
-	height: 18rem;
+
+	height: 45vh;
+}
+
+/*Gallery*/
+
+.gallery{
+	background-color:rgb(128, 21, 21, 0.1);
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+	grid-gap: 10px;
+	padding: 1%;
+	
+}
+
+.zone {
+    cursor:pointer;
+    /*display:inline-block;*/
+    text-align: center;
+    /* border:1px solid #bbb;*/
+    transition: all 0.3s linear;
+    padding: 10%
+
+
+}
+
+.zone:hover {
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+
+img:hover {
+    -webkit-box-shadow:rgba(256,256,256,0.8) 0px 8px 15px, inset rgba(256,256,256,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(256,256,256,0.8) 0px 8px 15px, inset rgba(256,256,256,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(256,256,256,0.8) 0px 8px 15px, inset rgba(256,256,256,0.15) 0px -10px 20px;
+    box-shadow:rgba(256,256,256,0.8) 0px 8px 15px, inset rgba(256,256,256,0.15) 0px -10px 20px;
+}
+
+img{
+	height: 100%;
+    width: 100%;
+    border-radius: 180px;
+}
+
+/*footer*/
+
+footer{
+	background-color: #000;
+	padding: 2%;
+	font-size: 1.7em;
+	font-style: italic;
+	text-align: center;
+	color: #e2dbdb;
+
 }
